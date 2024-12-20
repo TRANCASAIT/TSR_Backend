@@ -10,7 +10,8 @@
         }
         public class StateGet: StateUpdate
         {
-
+            public int State { get; set; }
+            public string? Message { get; set; }
         }
     }
 }

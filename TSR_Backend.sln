@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSR_Backend", "TSR_Backend\TSR_Backend.csproj", "{CB53BDB4-AD3D-463B-B0C2-EB87AD33395C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TSR_Backend", "TSR_Backend\TSR_Backend.csproj", "{CB53BDB4-AD3D-463B-B0C2-EB87AD33395C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F72159CA-0320-4705-BA7D-3DB9CD7A1970}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -33,8 +33,9 @@ namespace TSR_Backend.Models.DAO
                 switch (_DbConnection)
                 {
                     case DBConn.ServidorLocal:
-                        //_conn = new SqlConnection("Data Source=172.24.16.25;Initial Catalog=TSR_DB;Persist Security Info=True;User ID=TSR_user;Password=38b6ea9TuP!U");
-                        _conn = new SqlConnection("Data Source=CREYES-WK01\\SQLEXPRESS;Initial Catalog=TSR;Persist Security Info=True;User ID=sa;Password=123456");
+
+                        _conn = new SqlConnection("Data Source=172.24.16.25;Initial Catalog=TSR_DB;Persist Security Info=True;User ID=TSR_user;Password=38b6ea9TuP!U");
+                        //_conn = new SqlConnection("Data Source=CREYES-WK02\\SQLEXPRESS;Initial Catalog=TSR_V2;Persist Security Info=True;User ID=sa;Password=123456");
                         break;
                     case DBConn.ServidorLocal2:
                         _conn = new SqlConnection("Data Source=CREYES-WK01\\SQLEXPRESS;Initial Catalog=Transport_Service_Requests_Test;Persist Security Info=True;User ID=sa;Password=123456");
@@ -43,7 +44,10 @@ namespace TSR_Backend.Models.DAO
                 _conn!.Open();
                 _result = true;
             }
-            catch { }
+            catch(SqlException ex) {
+                _result = false;
+            }
+            
             return _result;
         }
 
